@@ -1,0 +1,136 @@
+<?php
+
+namespace App\Database\Seeds;
+
+use CodeIgniter\Database\Seeder;
+
+class LeadSeeder extends Seeder
+{
+    public function run()
+    {
+        $data = [
+            [
+                'first_name'   => 'John',
+                'last_name'    => 'Doe',
+                'email'        => 'john.doe@example.com',
+                'phone'        => '123-456-7890',
+                'company'      => 'Doe Inc.',
+                'source'       => 'Website',
+                'status'       => 'new',
+                'notes'        => 'Interested in demo.',
+                'assigned_to'  => 1,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Jane',
+                'last_name'    => 'Smith',
+                'email'        => 'jane.smith@example.com',
+                'phone'        => '987-654-3210',
+                'company'      => 'Smith LLC',
+                'source'       => 'Referral',
+                'status'       => 'contacted',
+                'notes'        => 'Asked for pricing details.',
+                'assigned_to'  => 2,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Alice',
+                'last_name'    => 'Johnson',
+                'email'        => 'alice.johnson@example.com',
+                'phone'        => '555-222-1111',
+                'company'      => 'Johnson Co.',
+                'source'       => 'Ad Campaign',
+                'status'       => 'qualified',
+                'notes'        => 'Qualified, ready to convert.',
+                'assigned_to'  => 1,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Bob',
+                'last_name'    => 'Williams',
+                'email'        => 'bob.williams@example.com',
+                'phone'        => '333-444-5555',
+                'company'      => 'Williams Ventures',
+                'source'       => 'Cold Call',
+                'status'       => 'new',
+                'notes'        => '',
+                'assigned_to'  => null,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Emily',
+                'last_name'    => 'Clark',
+                'email'        => 'emily.clark@example.com',
+                'phone'        => '111-222-3333',
+                'company'      => 'Clark Solutions',
+                'source'       => 'Website',
+                'status'       => 'contacted',
+                'notes'        => 'Requested brochure.',
+                'assigned_to'  => 2,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'David',
+                'last_name'    => 'Lee',
+                'email'        => 'david.lee@example.com',
+                'phone'        => '222-333-4444',
+                'company'      => 'Lee Technologies',
+                'source'       => 'Event',
+                'status'       => 'qualified',
+                'notes'        => 'Met at conference.',
+                'assigned_to'  => 3,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Sophia',
+                'last_name'    => 'Brown',
+                'email'        => 'sophia.brown@example.com',
+                'phone'        => '999-888-7777',
+                'company'      => 'Brown Creative',
+                'source'       => 'Referral',
+                'status'       => 'converted',
+                'notes'        => 'Closed deal.',
+                'assigned_to'  => 2,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Michael',
+                'last_name'    => 'Davis',
+                'email'        => 'michael.davis@example.com',
+                'phone'        => '888-777-6666',
+                'company'      => 'Davis Group',
+                'source'       => 'LinkedIn',
+                'status'       => 'lost',
+                'notes'        => 'Went with competitor.',
+                'assigned_to'  => 1,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Olivia',
+                'last_name'    => 'Wilson',
+                'email'        => 'olivia.wilson@example.com',
+                'phone'        => '444-555-6666',
+                'company'      => 'Wilson & Co.',
+                'source'       => 'Cold Email',
+                'status'       => 'contacted',
+                'notes'        => '',
+                'assigned_to'  => null,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+            [
+                'first_name'   => 'Daniel',
+                'last_name'    => 'Martinez',
+                'email'        => 'daniel.martinez@example.com',
+                'phone'        => '777-666-5555',
+                'company'      => 'Martinez Holdings',
+                'source'       => 'Ad Campaign',
+                'status'       => 'new',
+                'notes'        => 'Initial inquiry only.',
+                'assigned_to'  => 3,
+                'created_at'   => date('Y-m-d H:i:s'),
+            ],
+        ];
+
+        $this->db->table('leads')->insertBatch($data);
+    }
+}
